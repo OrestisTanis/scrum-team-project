@@ -18,17 +18,32 @@ public class ExampImpl implements IExam {
 
     @Override
     public List<QuestionAnswers> getQuestionAnswers() {
-        
+        List<QuestionAnswers> questionAnswers = examDao.getQuestionAnswers();
+        if (questionAnswers.size() == 0){
+            // Oops, there are no questions
+            return null;
+        }
+        return questionAnswers;
     }
 
     @Override
     public boolean saveAnswers(UserAnswers userAnswers) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean saved = examDao.saveAnswers(userAnswers);
+        if (!saved){
+            //  oops something went wrong
+            return false;
+        }
+        return true;
     }
 
     @Override
     public Result getResult() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Result result = examDao.getResult();
+        if (result == null){
+            // oops
+            return null;
+        }
+        return result;
     }
     
 }
