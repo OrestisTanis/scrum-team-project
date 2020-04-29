@@ -21,6 +21,6 @@ public interface IExam {
     // Save selected answers to db from the user input
     boolean save(UserAnswers userAnswers);
     
+    // Get result from db
     Result getResult();
-    
 }
