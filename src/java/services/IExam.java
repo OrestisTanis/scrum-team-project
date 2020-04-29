@@ -5,10 +5,20 @@
  */
 package services;
 
+import java.util.List;
+import models.QuestionAnswers;
+import models.UserAnswers;
+
 /**
  *
  * @author Walter
  */
 public interface IExam {
+     // Get questions from databse
+    List<QuestionAnswers> getQuestionAnswers();
+    
+    // Save selected answers to db from the user input
+    boolean save(UserAnswers userAnswers);
+    
     
 }
