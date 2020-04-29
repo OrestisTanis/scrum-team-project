@@ -15,11 +15,11 @@ import models.UserAnswers;
  * @author Walter
  */
 public interface IExam {
-     // Get questions from databse
+    // Get questions from databse
     List<QuestionAnswers> getQuestionAnswers();
     
     // Save selected answers to db from the user input
-    boolean save(UserAnswers userAnswers);
+    boolean saveAnswers(UserAnswers userAnswers);
     
     // Get result from db
     Result getResult();

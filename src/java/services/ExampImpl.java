@@ -5,10 +5,30 @@
  */
 package services;
 
+import java.util.List;
+import models.QuestionAnswers;
+import models.Result;
+import models.UserAnswers;
+
 /**
  *
  * @author Walter
  */
-public class ExampImpl {
+public class ExampImpl implements IExam {
+
+    @Override
+    public List<QuestionAnswers> getQuestionAnswers() {
+        
+    }
+
+    @Override
+    public boolean saveAnswers(UserAnswers userAnswers) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Result getResult() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
