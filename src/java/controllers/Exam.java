@@ -57,6 +57,8 @@ public class Exam extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        // Get questions from databse
+        // Send questions to front
     }
 
     /**
@@ -70,7 +72,8 @@ public class Exam extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        // Get user and selected answers from parameters
+        // Save to db via the examService
     }
 
     /**

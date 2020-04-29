@@ -7,6 +7,7 @@ package services;
 
 import java.util.List;
 import models.QuestionAnswers;
+import models.Result;
 import models.UserAnswers;
 
 /**
@@ -20,5 +21,6 @@ public interface IExam {
     // Save selected answers to db from the user input
     boolean save(UserAnswers userAnswers);
     
+    Result getResult();
     
 }

@@ -9,7 +9,7 @@ package models;
  *
  * @author Walter
  */
-public class Results {
+public class Result {
     User user;
     int numberOfQuestions;
     int correctAnswers;
