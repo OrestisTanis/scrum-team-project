@@ -5,11 +5,13 @@
  */
 package models;
 
+import java.util.List;
+
 /**
  *
  * @author Walter
  */
-public class QuestionAnswer {
+public class QuestionPossibleAnswers {
     Question question;
-    Answer selectedAnswer;
+    List<Answer> answers;
 }

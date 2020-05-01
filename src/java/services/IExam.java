@@ -6,7 +6,7 @@
 package services;
 
 import java.util.List;
-import models.QuestionAnswers;
+import models.QuestionPossibleAnswers;
 import models.Result;
 import models.UserAnswers;
 
@@ -16,7 +16,7 @@ import models.UserAnswers;
  */
 public interface IExam {
     // Get questions from databse
-    List<QuestionAnswers> getQuestionAnswers();
+    List<QuestionPossibleAnswers> getQuestionAnswers();
     
     // Save selected answers to db from the user input
     boolean saveAnswers(UserAnswers userAnswers);

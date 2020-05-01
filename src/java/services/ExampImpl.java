@@ -6,7 +6,7 @@
 package services;
 
 import java.util.List;
-import models.QuestionAnswers;
+import models.QuestionPossibleAnswers;
 import models.Result;
 import models.UserAnswers;
 

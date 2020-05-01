@@ -9,8 +9,7 @@ package models;
  *
  * @author Walter
  */
-public class Result {
-    User user;
+public class QuestionRightAnswer {
     Question question;
-    int correctAnswers;
+    Answer rightAnswer;
 }
