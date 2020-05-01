@@ -5,15 +5,11 @@
  */
 package models;
 
-import java.util.List;
-
 /**
  *
  * @author Walter
  */
-public class UserAnswers {
-    User user;
-    //Map<Question, Answer> selectedAnswersMap;
-    List<QuestionAnswer> selectedAnswers;
+public class QuestionAnswer {
+    Question question;
+    Answer selectedAnswer;
 }
-

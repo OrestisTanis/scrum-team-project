@@ -14,36 +14,36 @@ import models.UserAnswers;
  *
  * @author Walter
  */
-public class ExampImpl implements IExam {
-
-    @Override
-    public List<QuestionAnswers> getQuestionAnswers() {
-        List<QuestionAnswers> questionAnswers = examDao.getQuestionAnswers();
-        if (questionAnswers.size() == 0){
-            // Oops, there are no questions
-            return null;
-        }
-        return questionAnswers;
-    }
-
-    @Override
-    public boolean saveAnswers(UserAnswers userAnswers) {
-        boolean saved = examDao.saveAnswers(userAnswers);
-        if (!saved){
-            //  oops something went wrong
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public Result getResult() {
-        Result result = examDao.getResult();
-        if (result == null){
-            // oops
-            return null;
-        }
-        return result;
-    }
-    
-}
+//public class ExampImpl implements IExam {
+//
+//    @Override
+//    public List<QuestionAnswers> getQuestionAnswers() {
+//        List<QuestionAnswers> questionAnswers = examDao.getQuestionAnswers();
+//        if (questionAnswers.size() == 0){
+//            // Oops, there are no questions
+//            return null;
+//        }
+//        return questionAnswers;
+//    }
+//
+//    @Override
+//    public boolean saveAnswers(UserAnswers userAnswers) {
+//        //boolean saved = examDao.saveAnswers(userAnswers);
+//        if (!saved){
+//            //  oops something went wrong
+//            return false;
+//        }
+//        return true;
+//    }
+//
+//    @Override
+//    public Result getResult() {
+//        Result result = examDao.getResult();
+//        if (result == null){
+//            // oops
+//            return null;
+//        }
+//        return result;
+//    }
+//    
+//}
