@@ -6,9 +6,7 @@
 package services;
 
 import java.util.List;
-import models.QuestionPossibleAnswers;
-import models.Result;
-import models.UserAnswers;
+
 
 /**
  *
@@ -16,11 +14,11 @@ import models.UserAnswers;
  */
 public interface IExam {
     // Get questions from databse
-    List<QuestionPossibleAnswers> getQuestionAnswers();
+    List<entities.Question> getQuestions();
     
     // Save selected answers to db from the user input
-    boolean saveAnswers(UserAnswers userAnswers);
+    boolean saveUserSelectedAnswers(entities.UserQuestions);
     
     // Get result from db
-    Result getResult();
+    entities.UserQuestions getResults();
 }
