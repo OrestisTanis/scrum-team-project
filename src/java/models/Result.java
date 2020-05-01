@@ -5,12 +5,15 @@
  */
 package models;
 
+import java.util.List;
+
 /**
  *
  * @author Walter
  */
 public class Result {
     User user;
-    Question question;
-    int correctAnswers;
+    List<QuestionPossibleAnswers> questionsPossibleAnswers;
+    List<QuestionSelectedAnswer> selectedAnswers;
+    List<QuestionRightAnswer> questionsRightAnswers;
 }
