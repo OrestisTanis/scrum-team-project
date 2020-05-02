@@ -10,5 +10,31 @@ package models;
  * @author Walter
  */
 public class Answer {
-    String answer;
+    /* Fields */
+    String answerText;
+    
+    /* Constructors */
+    public Answer() {
+    }
+    public Answer(String answerText) {
+        this.answerText = answerText;
+    }
+
+    /* Getters Setters */
+    public String getAnswerText() {
+        return answerText;
+    }
+
+    public void setAnswerText(String answerText) {
+        this.answerText = answerText;
+    }
+
+    /* Methods */
+    @Override
+    public String toString() {
+        return "Answer{" + "answerText=" + answerText + '}';
+    }
+    
+    
+    
 }
