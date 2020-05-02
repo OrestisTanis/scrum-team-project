@@ -67,7 +67,6 @@ public class Exam extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
         // Get questions from databse (get dummy data for now)
         List<QuestionPossibleAnswers> questionsWithPossibleAnswers = examService.getQuestionsWithPossibleAnswers();
         // Send questions to front

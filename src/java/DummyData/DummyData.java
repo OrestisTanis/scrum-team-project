@@ -25,9 +25,9 @@ public class DummyData {
         // Question 1 with Possible Answers
         Question q1 = new Question("Question 1");
         Answer aq1 = new Answer("Answer 1");
-        Answer bq1 = new Answer("Answer 1");
-        Answer cq1 = new Answer("Answer 1");
-        Answer dq1 = new Answer("Answer 1");
+        Answer bq1 = new Answer("Answer 2");
+        Answer cq1 = new Answer("Answer 3");
+        Answer dq1 = new Answer("Answer 4");
         List<Answer> q1PossibleAnswers = new ArrayList();
         q1PossibleAnswers.add(aq1);
         q1PossibleAnswers.add(bq1);
@@ -38,14 +38,14 @@ public class DummyData {
         // Question 2 with Possible Answers
         Question q2 = new Question("Question 2");
         Answer aq2 = new Answer("Answer 1");
-        Answer bq2 = new Answer("Answer 1");
-        Answer cq2 = new Answer("Answer 1");
-        Answer dq2 = new Answer("Answer 1");
+        Answer bq2 = new Answer("Answer 2");
+        Answer cq2 = new Answer("Answer 3");
+        Answer dq2 = new Answer("Answer 4");
         List<Answer> q2PossibleAnswers = new ArrayList();
-        q1PossibleAnswers.add(aq2);
-        q1PossibleAnswers.add(bq2);
-        q1PossibleAnswers.add(cq2);
-        q1PossibleAnswers.add(dq2);
+        q2PossibleAnswers.add(aq2);
+        q2PossibleAnswers.add(bq2);
+        q2PossibleAnswers.add(cq2);
+        q2PossibleAnswers.add(dq2);
         QuestionPossibleAnswers question2WithPossibleAnswers = new QuestionPossibleAnswers(q2, q2PossibleAnswers);
         
         // Create list with the 2 questions and their answers and return it
