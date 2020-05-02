@@ -21,11 +21,11 @@ public class Question {
     }
 
     /* Getters Setters */
-    public String getQuestionText() {
+    public String getText() {
         return text;
     }
 
-    public void setQuestionText(String text) {
+    public void setText(String text) {
         this.text = text;
     }
 

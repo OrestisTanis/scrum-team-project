@@ -11,28 +11,27 @@ package models;
  */
 public class Answer {
     /* Fields */
-    String answerText;
+    String text;
     
     /* Constructors */
     public Answer() {
     }
-    public Answer(String answerText) {
-        this.answerText = answerText;
+    public Answer(String text) {
+        this.text = text;
     }
 
     /* Getters Setters */
-    public String getAnswerText() {
-        return answerText;
+    public String getText() {
+        return text;
     }
-
-    public void setAnswerText(String answerText) {
-        this.answerText = answerText;
+    public void setText(String text) {
+        this.text = text;
     }
 
     /* Methods */
     @Override
     public String toString() {
-        return "Answer{" + "answerText=" + answerText + '}';
+        return "Answer{" + "text=" + text + '}';
     }
     
     
