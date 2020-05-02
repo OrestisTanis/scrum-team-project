@@ -8,13 +8,14 @@ package services;
 import java.util.List;
 import models.QuestionPossibleAnswers;
 import models.Result;
+import models.User;
 import models.UserAnswers;
 
 /**
  *
  * @author Walter
  */
-public class ExampImpl implements IExam {
+public class ExamImpl implements IExam {
 
     @Override
     public List<QuestionPossibleAnswers> getQuestionsWithPossibleAnswers() {
@@ -32,11 +33,11 @@ public class ExampImpl implements IExam {
     @Override
     public boolean saveUserSelectedAnswers(UserAnswers userAnswers) {
         //boolean saved = examDao.saveUserSelectedAnswers(userAnswers);
-        if (!saved){
-            //  oops something went wrong
-            return false;
-        }
-        return true;
+//        if (!saved){
+//            //  oops something went wrong
+//            return false;
+//        }
+//        return true;
     }
 
     @Override
@@ -54,7 +55,7 @@ public class ExampImpl implements IExam {
     }
     
     @Override
-    boolean saveUser(User user){
+    public boolean saveUser(User user){
         // call saveUser from dao
     }
 }

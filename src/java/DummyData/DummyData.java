@@ -5,6 +5,8 @@
  */
 package DummyData;
 
+import java.util.List;
+
 /**
  *
  * @author Walter
