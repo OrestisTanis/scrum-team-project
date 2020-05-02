@@ -10,6 +10,7 @@ package models;
  * @author Walter
  */
 public class Question {
+<<<<<<< HEAD
     /* Fields */
     String text;
 
@@ -36,6 +37,9 @@ public class Question {
     }
     
     
+=======
+    String question;
+>>>>>>> origin/chatzbabis
     
     
 }
