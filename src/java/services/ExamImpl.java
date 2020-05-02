@@ -5,8 +5,14 @@
  */
 package services;
 
+import DummyData.DummyData;
+import java.util.ArrayList;
 import java.util.List;
+import models.Answer;
+import models.Question;
 import models.QuestionPossibleAnswers;
+import models.QuestionRightAnswer;
+import models.QuestionSelectedAnswer;
 import models.Result;
 import models.User;
 import models.UserAnswers;
@@ -26,8 +32,8 @@ public class ExamImpl implements IExam {
 //        }
 //        return questionAnswers;
 
-
-        // Return dummy data for testing
+        // *********** TESTING ************
+        return DummyData.getQuestionsWithPossibleAnswers();
     }
 
     @Override
@@ -38,6 +44,9 @@ public class ExamImpl implements IExam {
 //            return false;
 //        }
 //        return true;
+        
+        // To be deleted
+        return false;
     }
 
     @Override
@@ -50,12 +59,15 @@ public class ExamImpl implements IExam {
 //        return result;
 
 
-        
-        // Return dummy data for testing
+        // *********** TESTING ************
+        return DummyData.getResult(user);
     }
-    
+
     @Override
     public boolean saveUser(User user){
         // call saveUser from dao
+        
+        // To be deleted
+        return false;
     }
 }
