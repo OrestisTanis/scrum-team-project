@@ -14,8 +14,6 @@ import java.util.List;
 public class UserAnswers {
     User user;
     //Map<Question, Answer> selectedAnswersMap;
-    
-    
     List<QuestionSelectedAnswer> selectedAnswers;
 }
 

@@ -57,7 +57,7 @@ public class Exam extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        // Get questions from databse
+        // Get questions from databse (get dummy data for now)
         // Send questions to front
     }
 

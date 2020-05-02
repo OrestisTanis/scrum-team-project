@@ -14,11 +14,14 @@ import java.util.List;
  */
 public interface IExam {
     // Get questions from databse
-    List<entities.Question> getQuestions();
+    List<QuestionPossibleAnswers> getQuestionsWithPossibleAnswers();
+    
+    // Save User to db
+    boolean saveUser(User user);
     
     // Save selected answers to db from the user input
-    boolean saveUserSelectedAnswers(entities.UserQuestions);
+    boolean saveUserSelectedAnswers(UserAnswers userAnswers);
     
     // Get result from db
-    entities.UserQuestions getResults();
+    Result getResult(User user);
 }

@@ -14,36 +14,47 @@ import models.UserAnswers;
  *
  * @author Walter
  */
-//public class ExampImpl implements IExam {
-//
-//    @Override
-//    public List<QuestionAnswers> getQuestionAnswers() {
+public class ExampImpl implements IExam {
+
+    @Override
+    public List<QuestionPossibleAnswers> getQuestionsWithPossibleAnswers() {
 //        List<QuestionAnswers> questionAnswers = examDao.getQuestionAnswers();
 //        if (questionAnswers.size() == 0){
 //            // Oops, there are no questions
 //            return null;
 //        }
 //        return questionAnswers;
-//    }
-//
-//    @Override
-//    public boolean saveAnswers(UserAnswers userAnswers) {
-//        //boolean saved = examDao.saveAnswers(userAnswers);
-//        if (!saved){
-//            //  oops something went wrong
-//            return false;
-//        }
-//        return true;
-//    }
-//
-//    @Override
-//    public Result getResult() {
-//        Result result = examDao.getResult();
+
+
+        // Return dummy data for testing
+    }
+
+    @Override
+    public boolean saveUserSelectedAnswers(UserAnswers userAnswers) {
+        //boolean saved = examDao.saveUserSelectedAnswers(userAnswers);
+        if (!saved){
+            //  oops something went wrong
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public Result getResult(User user) {
+//        Result result = examDao.getResult(User user);
 //        if (result == null){
 //            // oops
 //            return null;
 //        }
 //        return result;
-//    }
-//    
-//}
+
+
+        
+        // Return dummy data for testing
+    }
+    
+    @Override
+    boolean saveUser(User user){
+        // call saveUser from dao
+    }
+}
