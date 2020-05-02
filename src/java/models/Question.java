@@ -10,7 +10,6 @@ package models;
  * @author Walter
  */
 public class Question {
-<<<<<<< HEAD
     /* Fields */
     String text;
 
@@ -35,11 +34,4 @@ public class Question {
     public String toString() {
         return "Question{" + "text=" + text + '}';
     }
-    
-    
-=======
-    String question;
->>>>>>> origin/chatzbabis
-    
-    
 }
