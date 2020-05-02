@@ -11,4 +11,6 @@ package models;
  */
 public class Question {
     String question;
+    
+    
 }
