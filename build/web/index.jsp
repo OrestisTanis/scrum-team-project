@@ -57,7 +57,7 @@
 
                     <% for (int j = 1; j <= answers.size(); j++) {%>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios<%=i%>" id="exampleRadios<%=i%>" value="Answer <%=j%>">
+                        <input class="form-check-input" type="radio" name="exampleRadios<%=i%>" id="exampleRadios<%=i%>" value="<%=answers.get(j - 1).getText()%>">
                         <label class="form-check-label" for="exampleRadios<%=i%>">
 
                             <%=j%>. <%= answers.get(j - 1).getText() %>
@@ -73,12 +73,20 @@
             <%if (request.getMethod().equals("POST") && result == null) {
                     User user = new User(request.getParameter("firstName"));
                     List<QuestionSelectedAnswer> questionSelectedAnswers = new ArrayList();
+                    Answer selectedAnswer = new Answer();
                     for (int z = 1; z <= questionPossibleAnswers.size(); z++) {
                         Question question = questionPossibleAnswers.get(z - 1).getQuestion();
-                        Answer selectedAnswer = new Answer(request.getParameter("exampleRadios" + z));
+                        for (int q = 0; q < questionPossibleAnswers.get(z-1).getAnswers().size(); q++){
+                            if (questionPossibleAnswers.get(z-1).getAnswers().get(q).getText().equals(request.getParameter("exampleRadios" + z))){
+                                 selectedAnswer.setText(request.getParameter("exampleRadios" + z));
+                                 selectedAnswer.setId(questionPossibleAnswers.get(z-1).getAnswers().get(q).getId());
+                            }
+                        }
+                       
                         QuestionSelectedAnswer questionSelectedAnswer = new QuestionSelectedAnswer(question, selectedAnswer);
                         questionSelectedAnswers.add(questionSelectedAnswer);
                     }
+                    
                     UserAnswers userAnswers = new UserAnswers(user, questionSelectedAnswers);
                     session.setAttribute("userAnswers", userAnswers);
                     String path = "Exam";
@@ -90,15 +98,16 @@
             <% if (result != null) {
                      int counter = 0;
                     
-                    for (int x = 0; x < questionPossibleAnswers.size(); x++) {
-                        String selected = result.getSelectedAnswers().get(x).getSelectedAnswer().getText();
-                        String right = result.getQuestionsRightAnswers().get(x).getRightAnswer().getText();
-                        if (selected.equals(right)) {
-                            counter++;
-                        }
-                    }
-                    out.println("<h1>Your score is: " + counter + " out of " + questionPossibleAnswers.size() + "</h1>");
-                    //out.println("<h1>Your score is: " + result.getNumberOfUserRightAnswers() + " out of " + result.getTotalNumberOfQuestions() + "</h1>");
+                //     for (int x = 0; x < questionPossibleAnswers.size(); x++) {
+//                        String selected = result.getSelectedAnswers().get(x).getSelectedAnswer().getText();
+//                        String right = result.getQuestionsRightAnswers().get(x).getRightAnswer().getText();
+//                        if (selected.equals(right)) {
+//                            counter++;
+//                        }
+//                    }
+//                    out.println("<h1>Your score is: " + counter + " out of " + questionPossibleAnswers.size() + "</h1>");
+                   out.println("<h1>Your score is: " + result.getNumberOfUserRightAnswers() + " out of " + result.getTotalNumberOfQuestions() + "</h1>");
+                   
                 }
             %>
 

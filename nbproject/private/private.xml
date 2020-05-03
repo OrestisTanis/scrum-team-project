@@ -3,13 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/G:/Programming/Java/NetBeansProjects/WebApps/team_exc/src/java/dao/QuestionSelectedAnswersData.java</file>
             <file>file:/G:/Programming/Java/NetBeansProjects/WebApps/team_exc/web/index.jsp</file>
-            <file>file:/G:/Programming/Java/NetBeansProjects/WebApps/team_exc/src/java/dao/QuestionPossibleAnswersData.java</file>
-            <file>file:/G:/Programming/Java/NetBeansProjects/WebApps/team_exc/web/WEB-INF/web.xml</file>
-            <file>file:/G:/Programming/Java/NetBeansProjects/WebApps/team_exc/web/META-INF/context.xml</file>
+            <file>file:/G:/Programming/Java/NetBeansProjects/WebApps/team_exc/src/java/dao/ExamDaoImpl.java</file>
             <file>file:/G:/Programming/Java/NetBeansProjects/WebApps/team_exc/src/java/services/ExamImpl.java</file>
-            <file>file:/G:/Programming/Java/NetBeansProjects/WebApps/team_exc/src/java/DummyData/DummyData.java</file>
-            <file>file:/G:/Programming/Java/NetBeansProjects/WebApps/team_exc/src/java/models/Result.java</file>
         </group>
     </open-files>
 </project-private>

@@ -29,13 +29,15 @@ public class ExamDaoImpl implements IExamDao {
 
     @Override
     public boolean saveUserSelectedAnswers(UserAnswers userAnswers) {
-
-        models.User user = userAnswers.getUser();
+        
         List<QuestionSelectedAnswer> questionSelectedAnswersList = userAnswers.getSelectedAnswers();
-
+       
         for (int i = 0; i < questionSelectedAnswersList.size(); i++) {
+            User user = userAnswers.getUser();
             models.Answer answer = questionSelectedAnswersList.get(i).getSelectedAnswer();
+            System.out.println("********** USER: " + user);
             boolean resultInsert = QuestionSelectedAnswersData.insertOneRow(user, answer);
+            System.out.println("---------------------- resultInsert: " + resultInsert);
             if (!resultInsert) {
                 return false;
             }
@@ -53,6 +55,7 @@ public class ExamDaoImpl implements IExamDao {
         result.setUser(user);
         result.setQuestionsPossibleAnswers(qpa);
         result.setSelectedAnswers(qsa);
+        System.out.println("******************* QRA: " + qra);
         result.setQuestionsRightAnswers(qra);
 
         return result;

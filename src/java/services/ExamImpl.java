@@ -43,8 +43,11 @@ public class ExamImpl implements IExam {
             //  oops something went wrong
             return false;
         }
-        
+         System.out.println("************ SERVICE USER: " + userAnswers.getUser());
         boolean saved = examDao.saveUserSelectedAnswers(userAnswers);
+        System.out.println("************ SERVICE USER after: " + userAnswers.getUser());
+        System.out.println("************ examDao saved: " + saved);
+       
         if (!saved){
             //  oops something went wrong
             return false;
