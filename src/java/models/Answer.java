@@ -39,8 +39,9 @@ public class Answer {
     /* Methods */
     @Override
     public String toString() {
-        return "Answer{" + "text=" + text + '}';
+        return "Answer{" + "text=" + text + ", id=" + id + '}';
     }
+    
     
     
     

@@ -30,7 +30,6 @@ public class UserData {
             ResultSet rs = pst.getGeneratedKeys();
             if (rs.next()) {
                 lastInsertId = rs.getInt(1);
-                System.out.println("Last insert ID =================" + lastInsertId);
                 user.setId(lastInsertId);
                 return true;
             }

@@ -30,14 +30,15 @@ public class QuestionSelectedAnswersData {
 
     public static List<models.QuestionSelectedAnswer> getAll(User user) {
         ResultSet rs = selectAll(user);
-        QuestionSelectedAnswer qsa = new QuestionSelectedAnswer();
+//        QuestionSelectedAnswer qsa = new QuestionSelectedAnswer();
         List<models.QuestionSelectedAnswer> qsaList = new ArrayList();
         try {
             while (rs.next()) {
                 Answer answer = new Answer();
                 Question question = new Question();
-                answer.setText(rs.getString(1));
-                question.setText(rs.getString(2));
+                QuestionSelectedAnswer qsa = new QuestionSelectedAnswer();
+                question.setText(rs.getString(1));
+                answer.setText(rs.getString(2));
                 qsa.setQuestion(question);
                 qsa.setSelectedAnswer(answer);
                 qsaList.add(qsa);
