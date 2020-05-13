@@ -8,14 +8,11 @@
         <servlet-name>Exam</servlet-name>
         <url-pattern>/Exam</url-pattern>
         <url-pattern>/exam</url-pattern>
+<!--        <url-pattern>/</url-pattern>-->
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    <error-page>
-        <error-code>500</error-code>
-        <location>/META-INF/errorpages/gandalf.jsp</location>
-    </error-page>
 </web-app>

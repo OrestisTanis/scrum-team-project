@@ -5,13 +5,14 @@
  */
 package models;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  *
  * @author Walter
  */
-public class UserAnswers {
+public class UserAnswers implements Serializable {
     User user;
     //Map<Question, Answer> selectedAnswersMap;
     List<QuestionSelectedAnswer> selectedAnswers;

@@ -5,13 +5,14 @@
  */
 package models;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Walter
  */
-public class QuestionSelectedAnswer {
+public class QuestionSelectedAnswer implements Serializable {
     private Question question;
     private Answer selectedAnswer;
 

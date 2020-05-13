@@ -5,11 +5,13 @@
  */
 package models;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Walter
  */
-public class Answer {
+public class Answer implements Serializable {
     /* Fields */
     String text;
     int id;

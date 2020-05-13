@@ -5,13 +5,14 @@
  */
 package models;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  *
  * @author Walter
  */
-public class Result {
+public class Result implements Serializable {
 
     private User user;
     private List<QuestionPossibleAnswers> questionsPossibleAnswers;
